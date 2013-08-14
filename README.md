@@ -60,3 +60,11 @@ curl -i http://127.0.0.1:8098/riak/people/beardy/_,friend,1/_,friend,1/
   - full-text search
   - secondary index & queries
 
+## Further reading
+
+![](http://imagery.pragprog.com/products/251/rwdata_xlargecover.jpg?1322511067)
+[Seven Databases in Seven Weeks, pragprog](http://pragprog.com/book/rwdata/seven-databases-in-seven-weeks)
+
+![](http://ecx.images-amazon.com/images/I/416lDSRBxhL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA278_PIkin4,BottomRight,-58,22_AA300_SH20_OU01_.jpg)
+[Riak Handbook by our friend Mathias @ Travis](http://www.amazon.com/Riak-Handbook-ebook/dp/B009ZIUCJ2)
+
