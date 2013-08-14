@@ -53,3 +53,10 @@ curl -i -X PUT -H "Content-Type: text/plain" -H 'Link: </riak/people/salty>; ria
 curl -i http://127.0.0.1:8098/riak/people/beardy/_,friend,_/_,friend,1/
 curl -i http://127.0.0.1:8098/riak/people/beardy/_,friend,1/_,friend,1/
 ```
+
+### Other cool shit (I didn't cover)
+
+  - JavaScript map/reduce queries
+  - full-text search
+  - secondary index & queries
+
