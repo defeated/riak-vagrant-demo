@@ -38,3 +38,18 @@ curl -i -H "Content-Type: application/json" http://127.0.0.1:8098/riak/mybucket 
 
 ### Manage cluster:
 <http://127.0.0.1:8098/admin>
+
+### Link traversal
+
+```bash
+curl -i -X PUT -H "Content-Type: text/plain" -H 'Link: </riak/people/tally>; riaktag="friend"' http://127.0.0.1:8098/riak/people/salty -d "Paul"
+
+curl -i -X PUT -H "Content-Type: text/plain" -H 'Link: </riak/people/beardy>; riaktag="friend"' http://127.0.0.1:8098/riak/people/tally -d "Matt"
+
+curl -i -X PUT -H "Content-Type: text/plain" -H 'Link: </riak/people/salty>; riaktag="friend"' http://127.0.0.1:8098/riak/people/beardy -d "Dave"
+
+curl -i -X PUT -H "Content-Type: text/plain" -H 'Link: </riak/people/salty>; riaktag="friend", </riak/people/tally>; riaktag="friend", </riak/people/beardy>; riaktag="friend"' http://127.0.0.1:8098/riak/people/shiny -d "Dave V., iOS magnate"
+
+curl -i http://127.0.0.1:8098/riak/people/beardy/_,friend,_/_,friend,1/
+curl -i http://127.0.0.1:8098/riak/people/beardy/_,friend,1/_,friend,1/
+```
